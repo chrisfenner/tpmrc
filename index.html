@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" 
+          href="site.css">
+  </head>
+  <footer>
+    <div id="perf-stats"/>
+  </footer>
+
+  <body>
+    <div class="container">
+      <div id="title">TPM 2.0 Error Code Decoder</div>
+      <div id="decoder"/>
+    </div>
+    
+    <script src="elm.min.js"></script>
+    <script>
+      var startTime = new Date().getTime();
+      var app = Elm.Main.init({
+        node: document.getElementById("decoder")
+      });
+      var endTime = new Date().getTime();
+      document.getElementById("perf-stats").innerHTML = "page loaded in " + (endTime - startTime) + "ms"
+    </script>
+  </body>
+
+</html>
